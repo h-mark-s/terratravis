@@ -1,0 +1,9 @@
+.env
+node_modules
+npm-debug.log
+.terraform
+*.tf
+*.tfvars
+*.tfstate
+*.tfstate.backup
+quiz-app.sql

@@ -1,0 +1,26 @@
+language: node_js
+
+services:
+  - docker
+
+addons:
+  ssh_known_hosts:
+    - $PUBLICIP
+
+before_install:
+  - pip install --user awscli
+
+install: skip
+
+script:
+  - docker build -t hmarks/quiz_app:$TRAVIS_BUILD_NUMBER .
+  - bash ./scripts/docker_push.sh
+
+before_deploy:
+  provider: script
+  script:
+    - aws s3 cp s3://bucketnév/.env $TRAVIS_BUILD_DIR/.env
+
+deploy:
+  provider: script
+  script: bash deploy.sh

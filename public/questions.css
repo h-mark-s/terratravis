@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  background: #abacab;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 10px;
+}
+
+.manage-questions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 0 100px;
+  width: 90vw;
+  border-radius: 10px;
+}
+
+.manage-questions-container > table {
+  width: 90%;
+  margin: 20px 0 20px;
+  border-collapse: collapse;
+}
+
+button {
+  border: none;
+  color: #ac1d1c;
+  background-color: #fff;
+}
+
+td {
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 50px;
+  padding: 10px;
+}
+
+tr:last-child > td {
+  border-bottom: none;
+}
+
+.navigation > a {
+  margin: 10px 20px;
+  padding-bottom: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #2291d5;
+}
+
+.add-question-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 0 100px;
+  width: 90vw;
+  border-radius: 10px;
+}
+
+.add-question-container > form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 20px 0 20px;
+}
+
+.field-container {
+  width: 90%;
+}
+
+button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}

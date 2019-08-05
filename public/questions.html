@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Questions</title>
+  <link rel="stylesheet" href="questions.css">
+</head>
+<body>
+  <p class='title'>Manage questions</p>
+  <div class="manage-questions-container">
+    <table class="manage-questions">
+    </table>
+  </div>
+  <p class="title">Create a new question</p>
+  <div class="add-question-container">
+    <form class="add-question">
+      <div class="field-container">
+        <input type="text" name="question" id="question" placeholder="Type your question here" maxlength="255" required autofocus>
+      </div>
+      <div class="field-container">
+        <label for="answer-one">#1</label>
+        <input type="text" name="answer-one" id="answer-one" placeholder="Type your answer here" maxlength="255" required>
+        <input type="radio" name="right-answer" id="radio-one">
+      </div>
+      <div class="field-container">
+        <label for="answer-two">#2</label>
+        <input type="text" name="answer-two" id="answer-two" placeholder="Type your answer here" maxlength="255" required>
+        <input type="radio" name="right-answer" id="radio-two">
+      </div>
+      <div class="field-container">
+        <label for="answer-three">#3</label>
+        <input type="text" name="answer-three" id="answer-three" placeholder="Type your answer here" maxlength="255" required>
+        <input type="radio" name="right-answer" id="radio-three">
+      </div>
+      <div class="field-container">
+        <label for="answer-four">#4</label>
+        <input type="text" name="answer-four" id="answer-four" placeholder="Type your answer here" maxlength="255" required>
+        <input type="radio" name="right-answer" id="radio-four">
+      </div>
+      <div class="field-container">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+  <div class="navigation">
+    <a href="http://localhost:5500/game">Go back to the game</a>
+  </div>
+  <script src="questions.js"></script>
+</body>
+</html>
