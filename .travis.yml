@@ -15,13 +15,10 @@ install: skip
 script:
   - docker build -t hmarks/quiz_app:$TRAVIS_BUILD_NUMBER .
   - bash ./scripts/docker_push.sh
-
-before_deploy:
-  provider: script
-  script:
-    - cd $TRAVIS_BUILD_DIR
-    - chmod +x ./scripts/aws.sh
-    - bash ./scripts/aws.sh
+  - bash ./scripts/aws.sh
+    #before_deploy:
+    #provider: script
+    #script:
 
 deploy:
   provider: script
