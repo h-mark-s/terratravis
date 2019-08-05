@@ -5,7 +5,7 @@ services:
 
 addons:
   ssh_known_hosts:
-    - $PUBLICIP
+    - $HOST
 
 install:
   - pip install --user awscli
