@@ -1,5 +1,4 @@
 #!/bin/bash
 
-#echo "$REGISTRY_PASS" | docker login -u "$REGISTRY_USER" --password-stdin
-docker login
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 docker push hmarks/quiz_app
