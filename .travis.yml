@@ -7,18 +7,13 @@ addons:
   ssh_known_hosts:
     - $PUBLICIP
 
-before_install:
+install:
   - pip install --user awscli
-
-install: skip
 
 script:
   - docker build -t hmarks/quiz_app:$TRAVIS_BUILD_NUMBER .
   - bash ./scripts/docker_push.sh
   - bash ./scripts/aws.sh
-    #before_deploy:
-    #provider: script
-    #script:
 
 deploy:
   provider: script
