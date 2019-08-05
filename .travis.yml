@@ -19,7 +19,7 @@ script:
 before_deploy:
   provider: script
   script:
-    - aws s3 cp s3://bucketnév/.env $TRAVIS_BUILD_DIR/.env
+    - aws s3 cp s3://$BUCKETNAME/.env $TRAVIS_BUILD_DIR/.env
 
 deploy:
   provider: script
