@@ -9,6 +9,7 @@ addons:
 
 install:
   - pip install --user awscli
+  - echo $HOST >> $HOME/.ssh/known_hosts
 
 script:
   - docker build -t hmarks/quiz_app:$TRAVIS_BUILD_NUMBER .
